@@ -63,10 +63,14 @@ function appViewModel() {
       currentDate = today.toISOString().split('T')[0],
       currentTime = today.toLocaleTimeString("de"),
       //YYYY-MM-DDTHH:MM:SS
-      //currentTime="07:00:00", //for testing
+      //for testing
+      //currentTime="07:00:00",
       startDateTime = currentDate + "T" + currentTime,
       endDateTime = currentDate + "T23:59:55";
-    // endDateTime = "2018-12-22T23:59:00"; //for testing
+    //for testing
+    // endDateTime = "2018-12-22T23:59:00";
+    //Meetup documentation
+    //https://www.meetup.com/meetup_api/docs/find/upcoming_events/
     //set the request url
     var meetupUrl = "https://api.meetup.com/find/upcoming_events/" +
       "?key=1d4d326536511d1f4d2a297b7a6c6e&lat=" + self.currentLat() +
